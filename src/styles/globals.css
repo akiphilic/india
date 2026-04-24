@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+  color: #1A4065;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+p, li, a, span, div {
+  font-family: Roboto, sans-serif;
+  line-height: 1.7;
+  font-size: 1.125rem;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #333;
+  font-family: Roboto, sans-serif;
+}
+
+/* Custom Button Styles */
+.btn-primary {
+  background-color: #FFCA0A;
+  color: #1A4065;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background-color: #A7B867;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
