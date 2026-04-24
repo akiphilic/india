@@ -122,14 +122,14 @@ export function EducationPage() {
         {/* Content */}
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <p className="text-[#FFCA0A] mb-6" style={{ fontSize: '1rem', letterSpacing: '0.1em' }}>
-            EDUCATION PROGRAM
+            Education Program | EDUCATION PROGRAM
           </p>
           <h1 className="text-white mb-8" style={{ fontSize: '3rem', fontFamily: 'Georgia, serif', lineHeight: '1.4', color: '#ffffff' }}>
             Education in Love and Understanding<br />
-            Character Development, Not Test Scores
+            Beyond Test Scores, Towards Human Growth
           </h1>
           <p className="text-white/90" style={{ fontSize: '1.25rem', lineHeight: '1.8' }}>
-            Jhamtse Gatsal's education values both academic achievement and character development
+            Jhamtse Gatsal's education nurtures the heart, mind, and body so children grow into compassionate, capable, and service-oriented human beings.
           </p>
         </div>
       </section>
@@ -193,6 +193,7 @@ export function EducationPage() {
                         src={principle.image}
                         alt={principle.title}
                         className="w-full h-[400px] object-cover"
+                        style={{ objectPosition: 'center center' }}
                       />
                     </div>
                   </div>
