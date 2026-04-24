@@ -373,7 +373,7 @@ export function EducationPage() {
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-full h-[300px] object-cover"
-                  style={{ objectPosition: 'center 30%' }}
+                  style={{ objectPosition: 'center 15%' }}
                 />
                 <div className="p-8">
                   <div className="mb-6">
