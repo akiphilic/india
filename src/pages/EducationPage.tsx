@@ -8,7 +8,7 @@ export function EducationPage() {
       title: 'Community and Responsibility, Not Competition',
       description: 'At Jhamtse Gatsal, children grow together not against each other. There are no rankings; each child is supported to follow their own path. Like a family, they care for one another and share responsibility, building belonging, empathy, and respect. Our aim is not to be better than others, but to grow into more aware, responsible, and compassionate individuals.',
       icon: <Heart size={48} color="#A7B867" />,
-      image: new URL('../assets/phase2/12.jpg', import.meta.url).href,
+      image: new URL('../assets/phase2/11.jpg', import.meta.url).href,
       comparison: [
         { traditional: 'Rankings and comparison', jhamtse: 'Shared growth and responsibility' },
         { traditional: 'Individual success', jhamtse: 'Care, cooperation, and belonging' },
@@ -30,7 +30,7 @@ export function EducationPage() {
       title: 'Learning by Living',
       description: 'Education at Jhamtse happens through real life. As active members of the Community, our children participate in diverse experiential learning programs like organic farming, vermicomposting, hydroponics, carpentry, masonry, natural cob (mud and straw) construction, waste management – all in addition to everyday academics, chores and responsibilities to create a sustainable model of living.',
       icon: <Sprout size={48} color="#A7B867" />,
-      image: new URL('../assets/phase2/16.png', import.meta.url).href,
+      image: new URL('../assets/phase2/10.jpg', import.meta.url).href,
       comparison: [
         { traditional: 'Classroom-only learning', jhamtse: 'Practical Experiential Learning' },
         { traditional: 'Theory-focused', jhamtse: 'Learning from nature' },
