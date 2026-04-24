@@ -19,7 +19,7 @@ export function EducationPage() {
       title: 'True education = Understanding × Self-awareness',
       description: 'We believe learning is not limited to academics. We guide children to understand themselves, work with their emotions, and build inner strength through daily practices like meditation and reflection. When a child feels "valued," learning becomes meaningful and self-driven. Our mission is to prepare children for life, not just a career. As Genla Lobsang often reminds us: "It\'s OK if a child fails in Math or English, but they cannot fail in life."',
       icon: <BookOpen size={48} color="#FFCA0A" />,
-      image: new URL('../assets/phase2/14.jpg', import.meta.url).href,
+      image: new URL('../assets/phase2/12.jpg', import.meta.url).href,
       comparison: [
         { traditional: 'Memorisation and fear of mistakes', jhamtse: 'Learning through reflection and experience' },
         { traditional: 'Rote learning', jhamtse: 'Understanding through real-life application' },
