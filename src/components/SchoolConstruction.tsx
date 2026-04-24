@@ -1,5 +1,6 @@
 import { Heart, ArrowRight, Award } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import newSchoolConstruction from '../assets/new-school-construction.jpg';
 
 export function SchoolConstruction() {
   const navigate = useNavigate();
@@ -15,8 +16,8 @@ export function SchoolConstruction() {
           {/* Left Side - Image */}
           <div className="relative h-[300px] lg:h-auto">
             <img
-              src="https://images.unsplash.com/photo-1650222899022-4bd4fb9f0bab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBidWlsZGluZyUyMGFyY2hpdGVjdHVyZSUyMHJlbmRlcmluZ3xlbnwxfHx8fDE3NjYxMjEzNzV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="New school building architectural rendering"
+              src={newSchoolConstruction}
+              alt="New school construction aerial view"
               className="w-full h-full object-cover"
             />
             {/* Completion Badge */}
