@@ -5,6 +5,7 @@ import { FinalCTA } from '../components/FinalCTA';
 import tezukaArchitectsImage from 'figma:asset/b30ff2083d1211b468e55485f2b11f8b073c9db8.png';
 import schoolAerial1 from 'figma:asset/2222a04846f45f1806db6e231c55d63aed15ec6f.png';
 import schoolAerial2 from 'figma:asset/6f1a25634fd8b3f69221a03e2c88959aa04c5e37.png';
+import newSchoolConstruction from '../assets/new-school-construction.jpg';
 import e01SharingClassroom from '../assets/e01-sharing-classroom.png';
 import e02Sketch from '../assets/e02-sketch.jpg';
 import e03TcuLab from '../assets/e03-tcu-lab.jpg';
@@ -245,8 +246,8 @@ export function NewSchoolProjectPage() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src={schoolAerial2}
-            alt="New School Courtyard View"
+            src={newSchoolConstruction}
+            alt="New School Construction Aerial View"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1A4065]/40 via-[#1A4065]/50 to-[#1A4065]/60"></div>
@@ -438,8 +439,8 @@ export function NewSchoolProjectPage() {
           {/* Main Featured Image */}
           <div className="mb-12">
             <img
-              src={schoolAerial2}
-              alt="New school building courtyard view"
+              src={newSchoolConstruction}
+              alt="New school construction aerial view"
               className="w-full h-[500px] object-cover rounded-[15px] shadow-2xl"
             />
           </div>
