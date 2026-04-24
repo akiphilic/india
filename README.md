@@ -8,4 +8,16 @@
   Run `npm i` to install the dependencies.
 
   Run `npm run dev` to start the development server.
-  
+
+  ## Basic Authentication
+
+  The site is protected with Basic Authentication (configured in `middleware.js`).
+
+  **⚠️ SECURITY IMPORTANT**:
+
+  Set these environment variables in your Vercel project for production:
+  - `BASIC_AUTH_USER` - Your desired username
+  - `BASIC_AUTH_PASSWORD` - Your secure password
+
+  **Never commit actual credentials to this repository.**
+  Default credentials exist in `middleware.js` for local development only.
