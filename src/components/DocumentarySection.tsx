@@ -1,4 +1,6 @@
-import { Play, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+
+const posterUrl = new URL('../assets/phase2/16.png', import.meta.url).href;
 
 export function DocumentarySection() {
   return (
@@ -13,23 +15,26 @@ export function DocumentarySection() {
           </p>
         </div>
 
-        {/* Video Placeholder */}
-        <div className="relative rounded-[15px] overflow-hidden shadow-2xl mb-8 group">
-          <a
-            href="https://jhamtse.org/loving-karma/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            <div className="aspect-video bg-gradient-to-br from-[#1A4065] to-[#A7B867] flex items-center justify-center">
-              <div className="text-center">
-                <div className="bg-white/20 backdrop-blur-sm rounded-full p-8 inline-flex items-center justify-center mb-4 group-hover:scale-110 transition-transform cursor-pointer">
-                  <Play size={60} color="#FFCA0A" fill="#FFCA0A" />
-                </div>
-                <p className="text-white text-xl">Documentary Film</p>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center mb-10">
+          <div className="md:col-span-2 flex justify-center">
+            <img
+              src={posterUrl}
+              alt="Loving Karma documentary poster"
+              className="rounded-[15px] shadow-2xl w-full max-w-sm"
+            />
+          </div>
+
+          <div className="md:col-span-3">
+            <div className="relative rounded-[15px] overflow-hidden shadow-2xl aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/dzvl5trn4L4"
+                title="Loving Karma Teaser"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
             </div>
-          </a>
+          </div>
         </div>
 
         <div className="text-center">

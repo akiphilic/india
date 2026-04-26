@@ -1,24 +1,18 @@
-import { GraduationCap, Users, Sprout, MapPin, Building2, Users as UsersIcon, Calendar } from 'lucide-react';
+import { Sprout, Users, MapPin, Building2, Users as UsersIcon } from 'lucide-react';
 
 export function ImpactNumbers() {
   const stats = [
     {
-      number: "90%+",
-      label: "University Enrollment Rate",
-      icon: GraduationCap,
-      color: "#1A4065", // Navy
-    },
-    {
-      number: "215",
-      label: "Total Students Supported",
-      icon: Users,
-      color: "#A7B867", // Sage green
-    },
-    {
-      number: "161",
-      label: "Currently Supported",
+      number: '150',
+      label: 'Currently Supported',
       icon: Sprout,
-      color: "#FFCA0A", // Yellow
+      color: '#1A4065',
+    },
+    {
+      number: '216',
+      label: 'Total Number Supported',
+      icon: Users,
+      color: '#A7B867',
     },
   ];
 
@@ -26,27 +20,21 @@ export function ImpactNumbers() {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Tawang, Arunachal Pradesh, India',
-      sublabel: 'Himalayan foothills at 3,000m elevation'
+      value: 'Tawang District, Arunachal Pradesh, India',
+      sublabel: 'Eastern Himalayas near the tri-junction of India, Bhutan, and Tibet',
     },
     {
       icon: Building2,
-      label: 'Facility',
-      value: 'Residential Campus',
-      sublabel: 'Classrooms, dormitories, organic farm, library'
+      label: 'Facilities',
+      value: 'Residential Community Campus',
+      sublabel: 'Classrooms, Family Houses, Organic Farm, Hydroponics, Community Kitchen',
     },
     {
       icon: UsersIcon,
       label: 'Community',
-      value: '161 children, 47 staff members',
-      sublabel: '57% local employment'
+      value: '150 children, 48 staff members',
+      sublabel: 'Growing as one extended family',
     },
-    {
-      icon: Calendar,
-      label: 'Established',
-      value: '2006',
-      sublabel: '19 years of service'
-    }
   ];
 
   return (
@@ -69,7 +57,7 @@ export function ImpactNumbers() {
         </div>
 
         {/* Impact Numbers */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 max-w-4xl mx-auto">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
@@ -107,7 +95,7 @@ export function ImpactNumbers() {
         </div>
 
         {/* Facility Info Cards - Horizontal Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
           {facilityInfo.map((info, index) => {
             const Icon = info.icon;
             return (
@@ -136,6 +124,16 @@ export function ImpactNumbers() {
               </div>
             );
           })}
+        </div>
+
+        {/* Closing tagline */}
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-[#1A4065] mb-2" style={{ fontSize: '1.5rem', fontFamily: 'Georgia, serif', fontWeight: '600' }}>
+            More than 200 individuals can learn
+          </p>
+          <p className="text-[#A7B867]" style={{ fontSize: '1.125rem', fontStyle: 'italic' }}>
+            Building the future learning space together
+          </p>
         </div>
       </div>
     </section>

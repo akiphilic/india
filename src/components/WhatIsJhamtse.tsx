@@ -1,43 +1,44 @@
-import { Home, BookOpen, Sprout } from 'lucide-react';
+import { Home, GraduationCap, Sprout, Users, Sparkles } from 'lucide-react';
+import youngestStudentsImg from '../assets/phase1/3-youngest-students.jpeg';
 
 export function WhatIsJhamtse() {
   const pillars = [
     {
       icon: Home,
       iconColor: '#1A4065',
-      title: 'Growing as a Family',
-      titleEn: 'Growing as a Family',
-      description: 'Not an orphanage, but one large family of 161 members. Older children care for younger ones in sibling-like relationships.',
-      badge: {
-        text: 'Impact: 95% of graduates say "this is my true home"',
-        bgColor: '#A7B867',
-        textColor: 'white'
-      }
+      title: 'More than an Institution',
+      description:
+        'Jhamtse Gatsal is a living, breathing community. A home where 150 children grow together as a family. Here, older children become role models and caregivers, nurturing a culture of empathy, responsibility, and belonging that lasts a lifetime.',
     },
     {
-      icon: BookOpen,
+      icon: GraduationCap,
       iconColor: '#A7B867',
-      title: 'Education with Love',
-      titleEn: 'Education with Love',
-      description: 'Valuing individual growth over test rankings. Building self-esteem leads to 90%+ university enrollment.',
-      badge: {
-        text: 'Impact: 18x higher than India\'s 5% poverty-level average',
-        bgColor: '#FFCA0A',
-        textColor: '#1A4065'
-      }
+      title: 'Empowering Individual Potential',
+      description:
+        'Every child at Jhamtse is seen, supported, and believed in. By nurturing confidence, resilience, and self-worth, we enable young people to shape their own futures—with over 90% continuing on to higher education and meaningful paths beyond.',
     },
     {
       icon: Sprout,
       iconColor: '#FFCA0A',
-      title: 'Sustainable Living',
-      titleEn: 'Sustainable Living',
-      description: 'Organic farming, solar power, environmental education. Children develop the ability to thrive anywhere.',
-      badge: {
-        text: 'Impact: 70% energy self-sufficient, 40% food self-sufficient',
-        bgColor: '#1A4065',
-        textColor: 'white'
-      }
-    }
+      title: 'Living Sustainability',
+      description:
+        'Sustainability at Jhamtse is not taught as a subject—it is lived every day. Through organic farming, solar energy, waste management, and environmental stewardship, children grow into conscious individuals prepared to live responsibly, with awareness and respect.',
+    },
+    {
+      icon: Users,
+      iconColor: '#1A4065',
+      title: 'A Community of Care',
+      subtitle: 'Our Teachers of Life',
+      description:
+        'At the heart of Jhamtse Gatsal are adults who choose to live with intention—supporting, guiding, and growing alongside the children.',
+    },
+    {
+      icon: Sparkles,
+      iconColor: '#A7B867',
+      title: 'Shaping Compassionate Futures',
+      description:
+        'Jhamtse is not only supporting children today, it is nurturing future leaders of compassion. Young individuals who carry empathy, resilience, and a deep sense of responsibility into their communities, creating ripples of positive change far beyond Jhamtse.',
+    },
   ];
 
   return (
@@ -46,30 +47,36 @@ export function WhatIsJhamtse() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-[#1A4065] mb-3">
-            What is Jhamtse Gatsal?
+            About Jhamtse Gatsal
           </h2>
           <p className="text-[#A7B867] text-lg" style={{ fontWeight: '500' }}>
             "Garden of Love and Compassion"
           </p>
         </div>
 
-        {/* Intro Paragraph */}
-        <div className="max-w-[800px] mx-auto text-center mb-16">
-          <p className="text-[#333333] text-lg mb-4" style={{ lineHeight: '1.8' }}>
-            Jhamtse Gatsal means "Garden of Love and Compassion" in Tibetan.
-          </p>
-          <p className="text-[#333333] text-lg mb-4" style={{ lineHeight: '1.8' }}>
-            It is a residential children's care and education community in Tawang, Arunachal Pradesh, northeastern India, for children who have lost their parents or come from extremely impoverished families.
-          </p>
-          <p className="text-[#333333] text-lg mb-4" style={{ lineHeight: '1.8' }}>
-            Since its founding in 2006, this community has practiced education that values "love and compassion" over "test scores."
-          </p>
-          <p className="text-[#333333] text-lg" style={{ lineHeight: '1.8' }}>
-            Children aged 5 to 18 live here, growing up in family-like warmth while receiving quality education.
-          </p>
+        {/* Intro with image */}
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-16 max-w-6xl mx-auto">
+          <div className="rounded-[15px] overflow-hidden shadow-lg">
+            <img
+              src={youngestStudentsImg}
+              alt="The youngest students of Jhamtse Gatsal"
+              className="w-full h-[420px] object-cover"
+            />
+          </div>
+          <div className="space-y-4">
+            <p className="text-[#333333] text-lg" style={{ lineHeight: '1.8' }}>
+              Jhamtse Gatsal means "Garden of Love and Compassion" in Tibetan—a transformative residential community for children and adults located in Tawang District, Arunachal Pradesh, in the Eastern Himalayas near the tri-junction of India, Bhutan, and Tibet.
+            </p>
+            <p className="text-[#333333] text-lg" style={{ lineHeight: '1.8' }}>
+              Since 2006, we have nurtured more than 200 vulnerable children into compassionate, capable leaders. Rooted in love, compassion, and sustainable practices, we cultivate hearts, minds, and bodies through education, shared responsibility, and service.
+            </p>
+            <p className="text-[#333333] text-lg" style={{ lineHeight: '1.8' }}>
+              The community's vision is simple and vast: that one day the world lives as one Jhamtse.
+            </p>
+          </div>
         </div>
 
-        {/* Three Pillars Grid */}
+        {/* Five Pillars Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
@@ -85,29 +92,19 @@ export function WhatIsJhamtse() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[#1A4065] mb-2" style={{ fontSize: '1.25rem', fontWeight: '500' }}>
+                <h3 className="text-[#1A4065] mb-2" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
                   {pillar.title}
                 </h3>
-                <p className="text-[#A7B867] text-sm mb-4" style={{ fontWeight: '400' }}>
-                  {pillar.titleEn}
-                </p>
+                {pillar.subtitle && (
+                  <p className="text-[#A7B867] text-sm mb-4 italic" style={{ fontWeight: '500' }}>
+                    {pillar.subtitle}
+                  </p>
+                )}
 
                 {/* Description */}
-                <p className="text-[#666666] mb-6 flex-grow" style={{ fontSize: '1rem', lineHeight: '1.6' }}>
+                <p className="text-[#666666] flex-grow" style={{ fontSize: '0.9375rem', lineHeight: '1.7' }}>
                   {pillar.description}
                 </p>
-
-                {/* Outcome Badge */}
-                <div
-                  className="rounded-full px-4 py-2 text-sm"
-                  style={{
-                    backgroundColor: pillar.badge.bgColor,
-                    color: pillar.badge.textColor,
-                    fontWeight: '500'
-                  }}
-                >
-                  {pillar.badge.text}
-                </div>
               </div>
             );
           })}

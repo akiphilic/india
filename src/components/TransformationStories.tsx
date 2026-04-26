@@ -1,16 +1,18 @@
 import { ArrowRight } from 'lucide-react';
+import tenzinDrolmaImg from '../assets/phase1/4-tenzin-drolma.jpeg';
+import dawaImg from '../assets/phase1/6-dawa.jpeg';
 
 export function TransformationStories() {
   const stories = [
     {
-      image: "https://images.unsplash.com/photo-1737523094517-e44d8b34fb64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaW1hbGF5YW4lMjBzbWlsaW5nJTIwZ2lybCUyMGNoaWxkfGVufDF8fHx8MTc2NjExNDAzOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "The Day She Found Her Smile Again",
-      description: "An 8-year-old girl who lost her parents and closed her heart. At her first birthday celebration at the community, she showed a genuine smile for the first time..."
+      image: tenzinDrolmaImg,
+      title: "Tenzin Drolma — From Field to Healer",
+      description: "She lost her mother young and grew up barefoot, helping her father in the fields. Welcomed into Jhamtse Gatsal, she became the first in her village to study Tibetan Medicine—and now serves as a doctor caring for the elderly."
     },
     {
-      image: "https://images.unsplash.com/photo-1655190966821-3e231990b9f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaW1hbGF5YW4lMjBib3klMjBzdHVkeWluZyUyMHJlYWRpbmd8ZW58MXx8fHwxNzY2MTE0MDM4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "Discovering the Joy of Learning",
-      description: "A boy who never had the chance to attend school. Now he's the first one in the classroom every morning, sharing his dream of becoming a doctor to help his village..."
+      image: dawaImg,
+      title: "Dawa — Rising Above Uncertainty",
+      description: "Raised in a home shadowed by addiction and loss, Dawa refused to let her circumstances define her. After graduating from Jhamtse Gatsal, she earned a scholarship to study History at Azim Premji University in Bangalore."
     }
   ];
 

@@ -292,6 +292,18 @@ export function NewSchoolProjectPage() {
         </div>
       </section>
 
+      {/* Vision Statement */}
+      <section className="bg-[#1A4065] py-16">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-[#FFCA0A] mb-4" style={{ fontSize: '0.875rem', letterSpacing: '0.15em' }}>
+            OUR VISION FOR THE NEW LEARNING CENTER
+          </p>
+          <p className="text-white" style={{ fontSize: '1.5rem', fontFamily: 'Georgia, serif', lineHeight: '1.6', fontStyle: 'italic' }}>
+            "To create a space where people from all over the world can come, learn, and experience the spirit of Jhamtse—carrying its seeds of compassion into the wider world."
+          </p>
+        </div>
+      </section>
+
       {/* Why We Need This */}
       <section className="bg-white py-20">
         <div className="max-w-6xl mx-auto px-6">

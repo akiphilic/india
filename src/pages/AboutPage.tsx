@@ -1,15 +1,17 @@
 import { Heart, Target, Users, Award, BookOpen, Sprout, Globe, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { FinalCTA } from '../components/FinalCTA';
-import founderImage from 'figma:asset/a3476e94b880ab5005d4c987fadd1ea968a0b307.png';
+import founderImage from '../assets/phase1/2-genla.jpeg';
+import heroLandscape from '../assets/phase1/1-jhamtse-landscape.png';
 
 export function AboutPage() {
   const timelineEvents = [
-    { year: 2006, title: 'Founded', description: 'Founded by Venerable Lobsang Phuntsok. Initially accepted 8 children.' },
-    { year: 2010, title: 'First Graduates', description: '12 children graduated high school. Many advanced to university.' },
-    { year: 2015, title: 'Emmy Award-winning', description: 'Documentary "Tashi and the Monk" won the international Emmy Award.' },
-    { year: 2020, title: '200 total recipients achieved', description: 'Supported over 200 children in total.' },
-    { year: 2025, title: 'New Building Project Start', description: 'Started construction with capacity for 250 children.' },
+    { year: 2006, title: 'Founded', description: 'Founded by Lobsang Phuntsok. Initially welcomed 36 children.' },
+    { year: 2016, title: 'Emmy Award Winner', description: '"Tashi and the Monk", a film about Jhamtse Gatsal, won an Emmy Award.' },
+    { year: 2017, title: 'First Batch of Graduates', description: '12 children graduated high school. All advanced to university.' },
+    { year: 2020, title: 'A Growing Family', description: 'Jhamtse Gatsal becomes home to over 200 children.' },
+    { year: 2025, title: 'Loving Karma Goes Global', description: 'Expanding the story of Tashi and the Monk, the film reaches audiences worldwide.' },
+    { year: 2026, title: 'New Building Project Start', description: 'Construction of the New Śūnyatā Learning Center begins.' },
   ];
 
   const teamMembers = [
@@ -47,7 +49,7 @@ export function AboutPage() {
       name: 'Kesang lhamu',
       role: 'Head Amala (Housemother)',
       bio: 'Leads the Amalas who care for children in the family homes. She nurtures a loving, disciplined, and familial environment where children feel safe and supported.',
-      image: new URL('../assets/phase2/6.jpg', import.meta.url).href,
+      image: new URL('../assets/phase1/8-kesang.jpeg', import.meta.url).href,
     },
     {
       name: 'Tenzin Dakpa',
@@ -72,21 +74,21 @@ export function AboutPage() {
   const awards = [
     {
       icon: '🏆',
-      title: '2015',
-      year: 'Emmy Award',
-      organization: 'National Academy of Television Arts & Sciences',
+      title: '2016',
+      year: 'Emmy Award – Best Short Documentary',
+      organization: 'Keynote speaker at the United Nations',
     },
     {
-      icon: '🌟',
-      title: '2018',
-      year: 'UN Child Support Award',
-      organization: 'United Nations Children\'s Fund (UNICEF)',
+      icon: '🥇',
+      title: '2021',
+      year: 'Gold Medal',
+      organization: 'State Government of Arunachal Pradesh',
     },
     {
-      icon: '🎖️',
-      title: '2022',
-      year: 'Indian Government Commendation',
-      organization: 'Ministry of Social Welfare, India',
+      icon: '🎤',
+      title: '2023',
+      year: 'TEDx Kyoto Speaker',
+      organization: 'Lobsang Phuntsok shares the Jhamtse story globally',
     },
   ];
 
@@ -100,8 +102,8 @@ export function AboutPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1625826712082-da15ddbde286?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaW1hbGF5YW4lMjBtb3VudGFpbnMlMjBsYW5kc2NhcGV8ZW58MXx8fHwxNzY2MTI1MzUyfDA&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Himalayan Mountains"
+            src={heroLandscape}
+            alt="Jhamtse Gatsal Landscape"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-[#1A4065]/70"></div>
@@ -116,8 +118,8 @@ export function AboutPage() {
             'Garden of Love and Compassion'<br />Jhamtse Gatsal
           </h1>
           <p className="text-white/90" style={{ fontSize: '1.25rem', lineHeight: '1.6' }}>
-            Since its founding, 161 children<br />
-            continue to be in a "real home"
+            Since 2006, home to 150 children and a growing<br />
+            community of caregivers and adults
           </p>
         </div>
       </section>
@@ -137,7 +139,7 @@ export function AboutPage() {
                 Mission
               </h2>
               <p className="text-gray-700" style={{ fontSize: '1.125rem', lineHeight: '1.8' }}>
-                We provide quality education, nutrition, healthcare, and above all, family-like love to orphaned children and children from extreme poverty families. We create an environment where every child can reach their full potential.
+                Jhamtse Gatsal is a transformative residential community for children and adults. We have nurtured more than 200 vulnerable children into compassionate, capable leaders. Rooted in love, compassion, and sustainable practices, we cultivate hearts, minds, and bodies through education, shared responsibility, and service. Together, we grow resilient individuals who strengthen families, communities, and our interconnected world.
               </p>
             </div>
 
@@ -152,7 +154,7 @@ export function AboutPage() {
                 Vision
               </h2>
               <p className="text-gray-700" style={{ fontSize: '1.125rem', lineHeight: '1.8' }}>
-                We envision a world where every child grows up in love and understanding and has the right to quality education. We support children to grow into confident, compassionate adults who can contribute to society.
+                We envision a world where every individual grows with love, stability, and belonging—nurtured by compassion, guided by wisdom, and strengthened through community so they may become resilient, responsible human beings who uplift society and live in harmony with others and the Earth.
               </p>
             </div>
           </div>
@@ -212,7 +214,7 @@ export function AboutPage() {
             {/* Right: Text */}
             <div>
               <h3 className="text-[#1A4065] mb-2" style={{ fontSize: '2rem', fontFamily: 'Georgia, serif' }}>
-                Venerable Lobsang Phuntsok
+                Lobsang Phuntsok
               </h3>
               <p className="text-[#A7B867] mb-6" style={{ fontSize: '1.125rem', fontWeight: '600' }}>
                 Founder & Director
@@ -220,19 +222,19 @@ export function AboutPage() {
 
               <div className="bg-white rounded-[15px] p-6 mb-6">
                 <p className="text-[#1A4065] italic" style={{ fontSize: '1.25rem', fontFamily: 'Georgia, serif' }}>
-                  "Every child has the right to be loved"
+                  "The potential of love and compassion to restore human hope is limitless."
                 </p>
               </div>
 
               <div className="space-y-4 text-gray-700" style={{ lineHeight: '1.8' }}>
                 <p>
-                  Venerable Lobsang Phuntsok, a Tibetan Buddhist monk, founded Jhamtse Gatsal in 2006. Based on his own experience as an orphan, he deeply understands the importance of raising children in an environment filled with love and compassion.
+                  Lobsang Phuntsok, a former Buddhist monk, is an internationally recognized leader in transformative learning, sustainable development, and social entrepreneurship. In 2006, he returned to his native region in the Northeastern Himalayas to found Jhamtse Gatsal Children's Community—"a Garden of Love and Compassion"—a home and immersive learning environment for vulnerable children.
                 </p>
                 <p>
-                  "Jhamtse Gatsal" means "Garden of Love and Compassion" in Tibetan. This name embodies his desire to create a place where all children can grow in unconditional love.
+                  Over the years, Jhamtse Gatsal has evolved into a living laboratory for people of all ages who seek to live with intention and meaning. Rooted in traditions that understand meditation as both stillness and movement, daily life—cleaning, working, learning, and caring for one another—becomes a practice of awareness in action.
                 </p>
                 <p>
-                  He continues to spend each day with the children, watching each one's individual growth. His vision is to provide holistic education that emphasizes not only material support, but also spiritual and emotional development.
+                  Lobsang's journey was first shared in the Emmy Award-winning film Tashi and the Monk and in his TEDxKyoto talk. Loving Karma extends this story, offering a deeper glimpse into the living practice emerging from Jhamtse Gatsal, and inviting people to discover that transformation arises through attentive presence and wholehearted participation in life.
                 </p>
               </div>
             </div>
@@ -300,6 +302,16 @@ export function AboutPage() {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Tax deductibility */}
+          <div className="mt-12 max-w-3xl mx-auto bg-[#FFCA0A]/15 border border-[#FFCA0A]/40 rounded-[15px] p-6 text-center">
+            <p className="text-[#FFCA0A] mb-2" style={{ fontSize: '0.875rem', letterSpacing: '0.1em' }}>
+              GIVE WITH CONFIDENCE
+            </p>
+            <p className="text-white" style={{ fontSize: '1.125rem', fontWeight: '600' }}>
+              Tax deductible in India, the United States, Switzerland, and Germany
+            </p>
           </div>
         </div>
       </section>

@@ -81,7 +81,7 @@ export function EducationPage() {
 
   const outcomes = [
     { value: '90% or above', label: 'University Excellence Rate', description: 'Many graduates pursue higher education' },
-    { value: 'Average GPA 3.8', label: 'Academic Performance', description: 'Maintaining High Scores in CBSE Board' },
+    { value: 'Above 60%', label: 'Academic Performance', description: 'Maintaining High Scores in CBSE Board' },
     { value: '100%', label: 'Every Child Experiences Growth', description: 'All children feel valued and supported' },
   ];
 
@@ -341,10 +341,10 @@ export function EducationPage() {
                 <p className="text-[#FFCA0A] mb-3" style={{ fontSize: '3rem', fontWeight: 'bold', fontFamily: 'Georgia, serif' }}>
                   {outcome.value}
                 </p>
-                <h3 className="text-white mb-2" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
+                <h3 className="text-white mb-3" style={{ fontSize: '1.75rem', fontWeight: '700', letterSpacing: '0.01em', textShadow: '0 1px 2px rgba(0,0,0,0.25)' }}>
                   {outcome.label}
                 </h3>
-                <p className="text-white/70">
+                <p className="text-white/90">
                   {outcome.description}
                 </p>
               </div>

@@ -1,4 +1,4 @@
-import { Heart, ArrowRight } from 'lucide-react';
+import { Heart, ArrowRight, Instagram, Linkedin, Facebook } from 'lucide-react';
 
 export function FinalCTA() {
   return (
@@ -60,10 +60,42 @@ export function FinalCTA() {
           </div>
         </div>
 
-        {/* Footer Info */}
+        {/* Social Media */}
         <div className="mt-16 pt-8 border-t border-white/20">
+          <p className="text-[#F1EDE8] mb-4" style={{ fontSize: '0.875rem', letterSpacing: '0.08em' }}>
+            FOLLOW JHAMTSE GATSAL
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <a
+              href="https://www.instagram.com/jhamtsegatsal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-3 rounded-full transition-all"
+            >
+              <Instagram size={20} />
+              <span style={{ fontWeight: '500' }}>@jhamtsegatsal</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/jhamtse-gatsal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-3 rounded-full transition-all"
+            >
+              <Linkedin size={20} />
+              <span style={{ fontWeight: '500' }}>Jhamtse Gatsal</span>
+            </a>
+            <a
+              href="https://www.facebook.com/JhamtseGatsalChildrensCommunity"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-3 rounded-full transition-all"
+            >
+              <Facebook size={20} />
+              <span style={{ fontWeight: '500' }}>Jhamtse Gatsal Children's Community</span>
+            </a>
+          </div>
           <p className="text-sm text-[#F1EDE8]">
-            © 2024 Jhamtse Gatsal Japan. All rights reserved.
+            © 2026 Jhamtse Gatsal. All rights reserved.
           </p>
         </div>
       </div>

@@ -2,20 +2,25 @@ import { TrendingUp, Users, GraduationCap, Heart, DollarSign, Award, Globe, Targ
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { FinalCTA } from '../components/FinalCTA';
+import tenzinDrolmaImg from '../assets/phase1/4-tenzin-drolma.jpeg';
+import rinchenImg from '../assets/phase1/5-rinchen.jpeg';
+import dawaImg from '../assets/phase1/6-dawa.jpeg';
+import lobsangImg from '../assets/phase1/7-lobsang.jpeg';
 
 export function ImpactPage() {
-  // Data for Year-over-Year Growth
+  // Data for Year-over-Year Growth (cumulative students enrolled)
   const yearlyData = [
-    { year: '2006', students: 8 },
-    { year: '2008', students: 25 },
-    { year: '2010', students: 42 },
-    { year: '2012', students: 68 },
-    { year: '2014', students: 95 },
-    { year: '2016', students: 120 },
-    { year: '2018', students: 145 },
-    { year: '2020', students: 172 },
-    { year: '2022', students: 195 },
-    { year: '2025', students: 215 },
+    { year: '2006', students: 34 },
+    { year: '2007', students: 46 },
+    { year: '2009', students: 73 },
+    { year: '2011', students: 77 },
+    { year: '2013', students: 85 },
+    { year: '2015', students: 90 },
+    { year: '2018', students: 95 },
+    { year: '2019', students: 111 },
+    { year: '2021', students: 133 },
+    { year: '2023', students: 165 },
+    { year: '2025', students: 216 },
   ];
 
   // Data for Graduate Outcomes
@@ -35,61 +40,41 @@ export function ImpactPage() {
 
   const transformationStories = [
     {
-      name: 'Sonam',
-      beforeTitle: '2010: Admitted as an orphan',
-      beforeAge: '8 years old',
-      beforeStatus: 'Lost both parents and moved from relative to relative. Could not attend school and was unable to read or write.',
-      beforeImage: 'https://images.unsplash.com/photo-1602204127613-88710168e528?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZCUyMGhhcHB5JTIwc21pbGluZ3xlbnwxfHx8fDE3NjYxMjU5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      afterTitle: '2025: Working as a nurse',
-      afterAge: '23 years old',
-      afterStatus: 'Graduated from nursing school with top honors. Currently working as a pediatric nurse at a general hospital in Delhi.',
-      afterImage: 'https://images.unsplash.com/photo-1758874572628-8a63fb0c9851?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMGFkdWx0JTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc2NjEyNTk0MHww&ixlib=rb-4.1.0&q=80&w=1080',
+      name: 'Tenzin Drolma',
+      story: "Tenzin Drolma was very young when she lost her mother. Raised by her father, a farmer, she spent much of her childhood helping in the fields. When we first met her, she was barefoot, covered in dirt from farm work, and spoke very little. When Tenzin joined the Jhamtse Gatsal community, she was welcomed into a place where she could learn, grow, and feel supported. Here, she continued her education and slowly began to discover her confidence and potential.",
+      currentRole: 'Today, Tenzin Drolma is a doctor of Tibetan medicine. She dreams of helping as many people as she can through her healing practice and has already spent time volunteering to care for elderly people. With the support of the community, she became a first-generation learner and the first person from her village to pursue this field.',
+      image: tenzinDrolmaImg,
       timeline: [
-        { year: 2010, event: 'Admitted to Jhamtse' },
-        { year: 2015, event: 'High school graduation (GPA 3.5)' },
-        { year: 2019, event: 'Nursing school graduation' },
-        { year: 2020, event: 'Hospital employment' },
-        { year: 2025, event: 'Promoted to head nurse' },
+        { year: 'Childhood', event: 'Lost her mother; raised by her farmer father' },
+        { year: 'Joined', event: 'Welcomed into the Jhamtse Gatsal community' },
+        { year: 'Studied', event: 'First in her village to study Tibetan Medicine' },
+        { year: 'Today', event: 'Doctor of Tibetan Medicine, volunteering with the elderly' },
       ],
-      quote: '"Jhamtse gave me family and education. Now it\'s my turn to give hope to sick children"',
+      quote: '"From a quiet child working in the fields to a healer serving her community."',
     },
     {
-      name: 'Tashi',
-      beforeTitle: '2012: Protected from domestic violence',
-      beforeAge: '10 years old',
-      beforeStatus: 'Protected from abuse by an alcoholic father. Suffered from severe trauma.',
-      beforeImage: 'https://images.unsplash.com/photo-1602204127613-88710168e528?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZCUyMGhhcHB5JTIwc21pbGluZ3xlbnwxfHx8fDE3NjYxMjU5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      afterTitle: '2025: Software Engineer',
-      afterAge: '23 years old',
-      afterStatus: 'Obtained Bachelor\'s degree in Computer Science. Currently working as a full-stack engineer at an IT company in Bangalore.',
-      afterImage: 'https://images.unsplash.com/photo-1758876019673-704b039d405c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBjYXJlZXIlMjBzdWNjZXNzfGVufDF8fHx8MTc2NjA3Mjc5MHww&ixlib=rb-4.1.0&q=80&w=1080',
+      name: 'Dawa',
+      story: 'Dawa grew up in a home shadowed by addiction, instability, and loss. With both parents struggling with alcoholism and her father gone too soon, her childhood was marked by hardship and uncertainty. Yet, she refused to let her circumstances define her. After graduating from Jhamtse Gatsal Children\'s Community, Dawa earned a scholarship to study History in Bangalore.',
+      currentRole: 'Now in her third year of college, she is growing into a confident, thoughtful young woman. Though her future path is still unfolding, her purpose is clear—to rise above her past and use her education to create meaningful change in the world.',
+      image: dawaImg,
       timeline: [
-        { year: 2012, event: 'Protected by Jhamtse' },
-        { year: 2013, event: 'Trauma care begins' },
-        { year: 2017, event: 'High school graduation (GPA 3.9)' },
-        { year: 2021, event: 'University graduation (CS major)' },
-        { year: 2025, event: 'Promoted to senior engineer' },
+        { year: '2008', event: 'Admitted to Jhamtse Gatsal' },
+        { year: '2022', event: 'High School Graduate' },
+        { year: '2026', event: 'About to graduate from Azim Premji University, Bangalore' },
       ],
-      quote: '"By writing computer code, I was able to rewrite my life"',
+      quote: '"I came from a place of uncertainty, but Jhamtse Gatsal helped me find strength, direction, and hope."',
     },
     {
-      name: 'Pema',
-      beforeTitle: '2014: Extreme poverty',
-      beforeAge: '12 years old',
-      beforeStatus: 'Eldest daughter in single-parent family with 6 siblings. Could not afford to attend school and was busy with housework and caring for younger siblings.',
-      beforeImage: 'https://images.unsplash.com/photo-1602204127613-88710168e528?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZCUyMGhhcHB5JTIwc21pbGluZ3xlbnwxfHx8fDE3NjYxMjU5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      afterTitle: '2025: Returned to alma mater as teacher',
-      afterAge: '23 years old',
-      afterStatus: 'After graduating from education department, returned to Jhamtse as a teacher. Now in charge of 20 students.',
-      afterImage: 'https://images.unsplash.com/photo-1765005343987-6bf51ae692c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlZHVjYXRpb24lMjBhY2hpZXZlbWVudHxlbnwxfHx8fDE3NjYxMjU5Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      name: 'Lobsang',
+      story: 'Lobsang was raised by her single mother, who struggled through short-term jobs to survive. With no father present and elderly grandparents unable to help, her mother made the heartbreaking yet brave choice to send her to Jhamtse Gatsal Children\'s Community, hoping for a better future. It changed everything—Lobsang became the first in her family to receive an education.',
+      currentRole: 'Today, she studies Hospitality Management and Catering in South India, passionately creating new dishes and dreaming of her own restaurant. From uncertainty to ambition, her journey shows how love, sacrifice, and education can transform a life and turn fragile beginnings into powerful new possibilities.',
+      image: lobsangImg,
       timeline: [
-        { year: 2014, event: 'Admitted to Jhamtse' },
-        { year: 2018, event: 'High school graduation (GPA 3.7)' },
-        { year: 2022, event: 'Education department graduation' },
-        { year: 2023, event: 'Became Jhamtse teacher' },
-        { year: 2025, event: 'Selected as grade director' },
+        { year: '2010', event: 'Admitted to Jhamtse Gatsal' },
+        { year: '2023', event: 'High School Graduate' },
+        { year: '2024', event: 'Enrolled in college (Hospitality Management & Catering)' },
       ],
-      quote: '"I want to give back the love and education I received to the next generation of children"',
+      quote: '"I am one of the few from my village who has come this far and I carry that with gratitude. One day, I want to give back and create opportunities for others like me."',
     },
   ];
 
@@ -131,37 +116,37 @@ export function ImpactPage() {
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-[15px] p-8 shadow-md">
               <p className="text-[#A7B867] mb-2" style={{ fontSize: '3.5rem', fontFamily: 'Georgia, serif', fontWeight: 'bold' }}>
-                90%<span style={{ fontSize: '2rem' }}>+</span>
+                150
               </p>
               <p className="text-[#1A4065]" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
-                University Enrollment
+                Currently Supported
               </p>
               <p className="text-gray-600 mt-2">
-                Graduate higher education rate
+                Children growing up at Jhamtse today
               </p>
             </div>
 
             <div className="bg-white rounded-[15px] p-8 shadow-md">
               <p className="text-[#FFCA0A] mb-2" style={{ fontSize: '3.5rem', fontFamily: 'Georgia, serif', fontWeight: 'bold' }}>
-                215<span style={{ fontSize: '2rem' }}>students</span>
+                216
               </p>
               <p className="text-[#1A4065]" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
-                Current Enrollment
+                Total Enrolled
               </p>
               <p className="text-gray-600 mt-2">
-                As of 2025
+                Children welcomed since 2006
               </p>
             </div>
 
             <div className="bg-white rounded-[15px] p-8 shadow-md">
               <p className="text-[#1A4065] mb-2" style={{ fontSize: '3.5rem', fontFamily: 'Georgia, serif', fontWeight: 'bold' }}>
-                161<span style={{ fontSize: '2rem' }}>people</span>
+                65
               </p>
               <p className="text-[#1A4065]" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
                 Total Graduates
               </p>
               <p className="text-gray-600 mt-2">
-                Since founding
+                12 working · 25 in college · 3 in internship
               </p>
             </div>
           </div>
@@ -295,8 +280,8 @@ export function ImpactPage() {
             {/* Left Column - Photo */}
             <div className="relative">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1597210100708-b025dcc32a2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHByb2Zlc3Npb25hbCUyMGVudHJlcHJlbmV1ciUyMG1vdW50YWluJTIwbGFuZHNjYXBlfGVufDF8fHx8MTc2NjEyOTQ5Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Rinchen"
+                src={rinchenImg}
+                alt="Rinchen Tsering"
                 className="w-full h-[500px] md:h-[700px] object-cover rounded-[15px] shadow-lg"
               />
               {/* Changemaker Badge */}
@@ -309,30 +294,27 @@ export function ImpactPage() {
             <div className="max-w-[550px]">
               {/* Header */}
               <h3 className="text-[#1A4065] mb-2" style={{ fontSize: '1.75rem', fontFamily: 'Georgia, serif', fontWeight: 'bold' }}>
-                Rinchen
+                Rinchen Tsering
               </h3>
               <p className="text-[#A7B867] mb-4" style={{ fontSize: '1rem' }}>
-                Jhamtse Gatsal Graduate (Admitted 2006)
+                Jhamtse Gatsal Graduate
               </p>
               <div className="inline-block bg-white border border-[#A7B867] px-4 py-2 rounded-[20px] mb-6">
                 <p className="text-[#1A4065]" style={{ fontSize: '0.875rem', fontWeight: '500' }}>
-                  Current: Sustainable Ecotourism Entrepreneur
+                  Current: Admin and Operations Manager, Jhamtse Gatsal
                 </p>
               </div>
 
-              {/* Quote Section */}
-              <div className="bg-white border-l-4 border-[#A7B867] rounded-lg p-6 shadow-sm mb-8">
-                <div className="text-[#A7B867] opacity-30 leading-none mb-2" style={{ fontSize: '3rem', fontFamily: 'Georgia, serif' }}>
-                  "
-                </div>
-                <p className="text-[#333333] italic" style={{ fontSize: '1rem', lineHeight: '1.8' }}>
-                  I want to share the beauty of the Himalayan region and our culture with people around the world.
-                  Through sustainable ecotourism business, I want to protect culture and the region while
-                  achieving economic growth for local residents. I want to provide all visitors with
-                  unique and memorable experiences, and achieve this in the most sustainable way possible.
+              {/* Story */}
+              <div className="space-y-4 mb-6 text-gray-700" style={{ fontSize: '1rem', lineHeight: '1.8' }}>
+                <p>
+                  When Rinchen first arrived at Jhamtse Gatsal, he barely spoke. Fear lived in his eyes. His parents had divorced, his father had walked away, and his stepfather offered no care. His mother, a struggling farmer, fought every day to feed her children. When cancer took her life, Rinchen's world fell apart.
                 </p>
-                <p className="text-[#A7B867] italic text-right mt-4" style={{ fontSize: '0.875rem' }}>
-                  — Rinchen, Jhamtse Changemaker
+                <p>
+                  But love found him here. With the steady support of the Jhamtse Gatsal family and sponsors, Rinchen slowly found his strength. He went on to earn a degree in Travel and Tourism Management—the first in his family to receive formal education. After three years working in Delhi, he chose to return home.
+                </p>
+                <p>
+                  In 2025, Rinchen came back as Admin and Operations Manager. Today, he leads with quiet compassion, proving that healing, hope, and a second chance can truly change a life.
                 </p>
               </div>
 
@@ -341,19 +323,19 @@ export function ImpactPage() {
                 <div className="flex items-center gap-3">
                   <GraduationCap size={40} color="#A7B867" strokeWidth={1.5} />
                   <p className="text-[#1A4065]" style={{ fontSize: '0.9375rem', fontWeight: '500' }}>
-                    Obtained degree in Travel & Tourism
+                    Degree in Travel & Tourism Management
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
                   <Briefcase size={40} color="#1A4065" strokeWidth={1.5} />
                   <p className="text-[#1A4065]" style={{ fontSize: '0.9375rem', fontWeight: '500' }}>
-                    Successful travel agency in Delhi
+                    Three years of professional experience in Delhi
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Sprout size={40} color="#FFCA0A" strokeWidth={1.5} />
+                  <Heart size={40} color="#FFCA0A" strokeWidth={1.5} />
                   <p className="text-[#1A4065]" style={{ fontSize: '0.9375rem', fontWeight: '500' }}>
-                    Pioneer of sustainable ecotourism in the region
+                    Returned home in 2025 to lead operations
                   </p>
                 </div>
               </div>
@@ -363,7 +345,7 @@ export function ImpactPage() {
           {/* Bottom Message */}
           <div className="text-center max-w-[900px] mx-auto mt-12">
             <p className="text-[#1A4065]" style={{ fontSize: '1.125rem', lineHeight: '1.6' }}>
-              It takes approximately 18 years of support per person to develop changemakers like Rinchen.
+              It takes years of love and support to nurture changemakers like Rinchen who return to lift up the next generation.
             </p>
           </div>
         </div>
@@ -391,78 +373,50 @@ export function ImpactPage() {
                   {story.name}'s Story
                 </h3>
 
-                {/* Before/After Comparison */}
-                <div className="grid md:grid-cols-2 gap-12 mb-12">
-                  {/* Before */}
-                  <div className="bg-white rounded-[15px] overflow-hidden shadow-md">
-                    <div className="bg-gray-400 text-white px-6 py-3">
-                      <p style={{ fontWeight: '600' }}>BEFORE</p>
-                    </div>
+                <div className={`grid md:grid-cols-2 gap-12 items-start mb-12 ${index % 2 === 1 ? 'md:[direction:rtl]' : ''}`}>
+                  {/* Portrait */}
+                  <div className="rounded-[15px] overflow-hidden shadow-lg md:[direction:ltr]">
                     <ImageWithFallback
-                      src={story.beforeImage}
-                      alt={`${story.name} before`}
-                      className="w-full h-[250px] object-cover"
+                      src={story.image}
+                      alt={story.name}
+                      className="w-full h-[500px] object-cover"
                     />
-                    <div className="p-6">
-                      <h4 className="text-[#1A4065] mb-2" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
-                        {story.beforeTitle}
-                      </h4>
-                      <p className="text-[#A7B867] mb-4" style={{ fontWeight: '600' }}>
-                        {story.beforeAge}
-                      </p>
-                      <p className="text-gray-700">
-                        {story.beforeStatus}
-                      </p>
-                    </div>
                   </div>
 
-                  {/* After */}
-                  <div className="bg-white rounded-[15px] overflow-hidden shadow-md border-2 border-[#A7B867]">
-                    <div className="bg-[#A7B867] text-white px-6 py-3">
-                      <p style={{ fontWeight: '600' }}>AFTER</p>
-                    </div>
-                    <ImageWithFallback
-                      src={story.afterImage}
-                      alt={`${story.name} after`}
-                      className="w-full h-[250px] object-cover"
-                    />
-                    <div className="p-6">
-                      <h4 className="text-[#1A4065] mb-2" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
-                        {story.afterTitle}
-                      </h4>
-                      <p className="text-[#A7B867] mb-4" style={{ fontWeight: '600' }}>
-                        {story.afterAge}
-                      </p>
-                      <p className="text-gray-700">
-                        {story.afterStatus}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                  {/* Story content */}
+                  <div className="md:[direction:ltr]">
+                    <p className="text-gray-700 mb-6" style={{ fontSize: '1.0625rem', lineHeight: '1.8' }}>
+                      {story.story}
+                    </p>
+                    <p className="text-gray-700 mb-6" style={{ fontSize: '1.0625rem', lineHeight: '1.8' }}>
+                      {story.currentRole}
+                    </p>
 
-                {/* Timeline */}
-                <div className="bg-white rounded-[15px] p-8 shadow-md mb-8">
-                  <h4 className="text-[#1A4065] mb-6" style={{ fontSize: '1.25rem', fontWeight: '600' }}>
-                    Growth Trajectory
-                  </h4>
-                  <div className="space-y-4">
-                    {story.timeline.map((milestone, idx) => (
-                      <div key={idx} className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-20 text-[#A7B867]" style={{ fontWeight: '600' }}>
-                          {milestone.year}
-                        </div>
-                        <div className="flex items-center gap-3 flex-1">
-                          <ArrowUp size={20} color="#FFCA0A" />
-                          <p className="text-gray-700">{milestone.event}</p>
-                        </div>
+                    {/* Timeline */}
+                    <div className="bg-white rounded-[15px] p-6 shadow-md">
+                      <h4 className="text-[#1A4065] mb-4" style={{ fontSize: '1.125rem', fontWeight: '600' }}>
+                        Growth Trajectory
+                      </h4>
+                      <div className="space-y-3">
+                        {story.timeline.map((milestone, idx) => (
+                          <div key={idx} className="flex items-start gap-4">
+                            <div className="flex-shrink-0 w-24 text-[#A7B867]" style={{ fontWeight: '600' }}>
+                              {milestone.year}
+                            </div>
+                            <div className="flex items-center gap-3 flex-1">
+                              <ArrowUp size={18} color="#FFCA0A" />
+                              <p className="text-gray-700 text-sm">{milestone.event}</p>
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                   </div>
                 </div>
 
                 {/* Quote */}
                 <blockquote className="bg-[#1A4065] text-white rounded-[15px] p-8 text-center">
-                  <p className="text-[#FFCA0A] mb-4" style={{ fontSize: '2rem', fontFamily: 'Georgia, serif', lineHeight: '1.5' }}>
+                  <p className="text-[#FFCA0A] mb-4" style={{ fontSize: '1.75rem', fontFamily: 'Georgia, serif', lineHeight: '1.5' }}>
                     {story.quote}
                   </p>
                   <p className="text-white/80">
@@ -581,26 +535,45 @@ export function ImpactPage() {
 
           <div className="mt-12 bg-[#F1EDE8] rounded-[15px] p-8">
             <h3 className="text-[#1A4065] mb-6 text-center" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
-              Media Coverage
+              Media Coverage Records
             </h3>
-            <div className="flex flex-wrap justify-center gap-6 text-gray-600">
-              <div className="flex items-center gap-2">
-                <CheckCircle size={20} color="#A7B867" />
-                <span>NHK Special (2019)</span>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700 max-w-4xl mx-auto">
+              <div className="flex items-start gap-3">
+                <CheckCircle size={20} color="#A7B867" className="flex-shrink-0 mt-1" />
+                <span>TEDx Kyoto talk by our founder, Lobsang Phuntsok</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle size={20} color="#A7B867" />
-                <span>Asahi Shimbun (2021)</span>
+              <div className="flex items-start gap-3">
+                <CheckCircle size={20} color="#A7B867" className="flex-shrink-0 mt-1" />
+                <span>Interview of Lobsang on ScooNews, India's largest education-sector media outlet</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle size={20} color="#A7B867" />
-                <span>TED Talk (2022)</span>
+              <div className="flex items-start gap-3">
+                <CheckCircle size={20} color="#A7B867" className="flex-shrink-0 mt-1" />
+                <span>Article on Jhamtse Gatsal by Efforts for Good, sharing positive stories from across India</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle size={20} color="#A7B867" />
-                <span>Forbes India (2023)</span>
+              <div className="flex items-start gap-3">
+                <CheckCircle size={20} color="#A7B867" className="flex-shrink-0 mt-1" />
+                <span>Webinar by our founder on "Being the best version of yourself" with SOIL Institute of Management</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle size={20} color="#A7B867" className="flex-shrink-0 mt-1" />
+                <span>Article by Daily Good on Jhamtse Gatsal and the film Tashi and the Monk</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle size={20} color="#A7B867" className="flex-shrink-0 mt-1" />
+                <span>Video by Mike Libecki, a Nat Geo Explorer who visited Jhamtse Gatsal</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle size={20} color="#A7B867" className="flex-shrink-0 mt-1" />
+                <span>Coverage by Ravi Venkatesan, former Chairman of Microsoft India and Chairman of GEAPP</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle size={20} color="#A7B867" className="flex-shrink-0 mt-1" />
+                <span>Video by Stephen Butler, Executive Director of Compassion Institute</span>
               </div>
             </div>
+            <p className="text-center text-gray-500 text-xs mt-6 italic">
+              Direct links coming soon as sources are finalized.
+            </p>
           </div>
         </div>
       </section>
