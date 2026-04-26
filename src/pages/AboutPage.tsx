@@ -310,7 +310,7 @@ export function AboutPage() {
               GIVE WITH CONFIDENCE
             </p>
             <p className="text-white" style={{ fontSize: '1.125rem', fontWeight: '600' }}>
-              Tax deductible in India, the United States, Switzerland, and Germany
+              Tax deductible in India, US, Switzerland and Germany
             </p>
           </div>
         </div>

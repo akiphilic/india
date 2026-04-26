@@ -5,7 +5,7 @@ export function GroupSponsorship() {
     "Biannual letters and reports from the children",
     "Invitation to visit the community (optional)",
     "Starting from 3,500 yen per month",
-    "Tax-deductible donations",
+    "Tax deductible in India, US, Switzerland and Germany",
     "Cancel anytime with no cancellation fee",
   ];
 

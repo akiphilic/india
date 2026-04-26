@@ -2,25 +2,29 @@ import { TrendingUp, Users, GraduationCap, Heart, DollarSign, Award, Globe, Targ
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { FinalCTA } from '../components/FinalCTA';
-import tenzinDrolmaImg from '../assets/phase1/4-tenzin-drolma.jpeg';
 import rinchenImg from '../assets/phase1/5-rinchen.jpeg';
 import dawaImg from '../assets/phase1/6-dawa.jpeg';
 import lobsangImg from '../assets/phase1/7-lobsang.jpeg';
 
 export function ImpactPage() {
-  // Data for Year-over-Year Growth (cumulative students enrolled)
+  // Data for Year-over-Year Growth (number of students newly enrolled per year)
   const yearlyData = [
     { year: '2006', students: 34 },
-    { year: '2007', students: 46 },
-    { year: '2009', students: 73 },
-    { year: '2011', students: 77 },
-    { year: '2013', students: 85 },
-    { year: '2015', students: 90 },
-    { year: '2018', students: 95 },
-    { year: '2019', students: 111 },
-    { year: '2021', students: 133 },
-    { year: '2023', students: 165 },
-    { year: '2025', students: 216 },
+    { year: '2007', students: 12 },
+    { year: '2009', students: 27 },
+    { year: '2010', students: 3 },
+    { year: '2011', students: 1 },
+    { year: '2012', students: 1 },
+    { year: '2013', students: 7 },
+    { year: '2014', students: 3 },
+    { year: '2015', students: 2 },
+    { year: '2018', students: 5 },
+    { year: '2019', students: 16 },
+    { year: '2021', students: 22 },
+    { year: '2022', students: 22 },
+    { year: '2023', students: 10 },
+    { year: '2024', students: 34 },
+    { year: '2025', students: 17 },
   ];
 
   // Data for Graduate Outcomes
@@ -39,19 +43,6 @@ export function ImpactPage() {
   ];
 
   const transformationStories = [
-    {
-      name: 'Tenzin Drolma',
-      story: "Tenzin Drolma was very young when she lost her mother. Raised by her father, a farmer, she spent much of her childhood helping in the fields. When we first met her, she was barefoot, covered in dirt from farm work, and spoke very little. When Tenzin joined the Jhamtse Gatsal community, she was welcomed into a place where she could learn, grow, and feel supported. Here, she continued her education and slowly began to discover her confidence and potential.",
-      currentRole: 'Today, Tenzin Drolma is a doctor of Tibetan medicine. She dreams of helping as many people as she can through her healing practice and has already spent time volunteering to care for elderly people. With the support of the community, she became a first-generation learner and the first person from her village to pursue this field.',
-      image: tenzinDrolmaImg,
-      timeline: [
-        { year: 'Childhood', event: 'Lost her mother; raised by her farmer father' },
-        { year: 'Joined', event: 'Welcomed into the Jhamtse Gatsal community' },
-        { year: 'Studied', event: 'First in her village to study Tibetan Medicine' },
-        { year: 'Today', event: 'Doctor of Tibetan Medicine, volunteering with the elderly' },
-      ],
-      quote: '"From a quiet child working in the fields to a healer serving her community."',
-    },
     {
       name: 'Dawa',
       story: 'Dawa grew up in a home shadowed by addiction, instability, and loss. With both parents struggling with alcoholism and her father gone too soon, her childhood was marked by hardship and uncertainty. Yet, she refused to let her circumstances define her. After graduating from Jhamtse Gatsal Children\'s Community, Dawa earned a scholarship to study History in Bangalore.',
@@ -166,11 +157,11 @@ export function ImpactPage() {
               <div className="flex items-center gap-3 mb-6">
                 <TrendingUp size={32} color="#A7B867" />
                 <h3 className="text-[#1A4065]" style={{ fontSize: '1.75rem', fontWeight: '600' }}>
-                  Year-over-year Trend: Growth in student enrollment
+                  Year-over-year Trend: Number of Students Enrolled
                 </h3>
               </div>
               <p className="text-gray-700 mb-8">
-                Growth from 8 students at founding in 2006 to 215 in 2025
+                New children welcomed into Jhamtse Gatsal each year — 216 enrolled in total since 2006
               </p>
               <ResponsiveContainer width="100%" height={350}>
                 <BarChart data={yearlyData}>

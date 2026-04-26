@@ -55,8 +55,8 @@ export function FinalCTA() {
             <p className="text-[#F1EDE8]">Continuous Support Record</p>
           </div>
           <div className="text-white">
-            <p style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: 'bold' }}>Tax Deductible</p>
-            <p className="text-[#F1EDE8]">Donation Tax Benefits</p>
+            <p style={{ fontSize: '1.25rem', marginBottom: '0.5rem', fontWeight: 'bold', lineHeight: '1.3' }}>Tax deductible in</p>
+            <p className="text-[#F1EDE8]">India, US, Switzerland and Germany</p>
           </div>
         </div>
 

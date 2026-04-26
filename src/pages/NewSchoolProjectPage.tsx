@@ -62,7 +62,7 @@ export function NewSchoolProjectPage() {
   const projectSpecs = [
     { icon: '📐', label: 'Total area', value: '2,300m² (Twice the current size)' },
     { icon: '🏫', label: 'Number of Classrooms', value: '12 rooms (Currently 6 rooms)' },
-    { icon: '👥', label: 'Capacity', value: '300 people (Currently 161 children)' },
+    { icon: '👥', label: 'Capacity', value: '300 people (Currently 150 children)' },
     { icon: '📚', label: 'Education Level', value: 'Nursery to K-12 (CBSE)' },
     { icon: '🌱', label: 'Certification', value: 'Green Building Certification Expected' },
     { icon: '📅', label: 'Expected Completion', value: '2029 March' }
@@ -311,7 +311,7 @@ export function NewSchoolProjectPage() {
             Why a New Building is Needed
           </h2>
           <p className="text-center text-gray-600 mb-16" style={{ fontSize: '1.125rem' }}>
-            161 children need better learning environments
+            150 children need better learning environments
           </p>
 
           <div className="space-y-8">
@@ -816,7 +816,7 @@ export function NewSchoolProjectPage() {
           </div>
 
           <p className="text-white/70 text-sm">
-            * Tax-deductible - Certified NPO
+            * Tax deductible in India, US, Switzerland and Germany
           </p>
         </div>
       </section>

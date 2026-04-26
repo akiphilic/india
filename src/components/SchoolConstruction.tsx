@@ -152,7 +152,7 @@ export function SchoolConstruction() {
             <div className="flex items-center gap-2 text-gray-600">
               <Award size={12} />
               <p style={{ fontSize: '12px' }}>
-                Certified NPO - Tax Deductible | 100% Transparent Funding
+                Tax deductible in India, US, Switzerland and Germany | 100% Transparent Funding
               </p>
             </div>
           </div>

@@ -94,10 +94,10 @@ export function DonatePage() {
             For ¥3,500 per month,<br />Illuminate the Future of One Child
           </h1>
           <p className="text-gray-700 mb-6" style={{ fontSize: '1.125rem' }}>
-            161 children are waiting for your warmth and support
+            150 children are waiting for your warmth and support
           </p>
           <p className="text-gray-600" style={{ fontSize: '0.875rem' }}>
-            ※ Tax-deductible · Certified NPO/NPO
+            ※ Tax deductible in India, US, Switzerland and Germany
           </p>
         </div>
       </section>
@@ -307,7 +307,7 @@ export function DonatePage() {
                 <DollarSign size={32} color="#1A4065" />
               </div>
               <p className="text-[#1A4065] text-sm" style={{ fontWeight: '600' }}>
-                Tax Deductible
+                Tax deductible in India, US, Switzerland and Germany
               </p>
             </div>
           </div>
