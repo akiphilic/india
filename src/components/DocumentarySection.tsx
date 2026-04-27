@@ -31,8 +31,9 @@ export function DocumentarySection() {
     : `https://www.youtube.com/embed/${VIDEO_ID}?${BASE_PARAMS}`;
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="bg-white">
+      {/* Heading + poster */}
+      <div className="max-w-6xl mx-auto px-6 pt-24 pb-10">
         <div className="text-center mb-12">
           <h2 className="mb-6" style={{ fontSize: '3rem', fontFamily: 'Georgia, serif', color: '#1A4065' }}>
             LOVING KARMA
@@ -42,7 +43,7 @@ export function DocumentarySection() {
           </p>
         </div>
 
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center">
           <img
             src={posterUrl}
             alt="Loving Karma documentary poster"
@@ -51,43 +52,46 @@ export function DocumentarySection() {
         </div>
       </div>
 
-      <div className="w-full mb-12" ref={playerRef}>
-        <div className="relative w-full aspect-video bg-black shadow-2xl overflow-hidden group">
-          <iframe
-            key={`${shouldAutoplay ? 'autoplay' : 'idle'}-${muted ? 'muted' : 'unmuted'}`}
-            src={iframeSrc}
-            title="Loving Karma Teaser"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            className="absolute inset-0 w-full h-full pointer-events-none"
-            tabIndex={-1}
-          />
-          {/* Cinematic gradient overlays */}
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/40 to-transparent" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 to-transparent" />
-          {/* Custom unmute control */}
-          <button
-            type="button"
-            onClick={() => setMuted((m) => !m)}
-            aria-label={muted ? 'Unmute teaser' : 'Mute teaser'}
-            className="absolute bottom-6 right-6 flex items-center gap-2 bg-white/15 backdrop-blur-md text-white px-4 py-2.5 rounded-full hover:bg-white/25 transition-all duration-300 shadow-lg border border-white/20"
-            style={{ fontSize: '0.875rem', fontWeight: '500' }}
-          >
-            {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
-            <span>{muted ? 'Tap for sound' : 'Sound on'}</span>
-          </button>
-          {/* Title plate */}
-          <div className="absolute top-6 left-6 pointer-events-none">
-            <p className="text-white/80" style={{ fontSize: '0.75rem', letterSpacing: '0.18em', fontWeight: '500' }}>
-              TEASER
-            </p>
-            <p className="text-white" style={{ fontSize: '1.25rem', fontFamily: 'Georgia, serif', textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}>
-              Loving Karma
-            </p>
+      {/* Pin region — video sticks to top of viewport while scrolling here */}
+      <div className="relative" style={{ height: '160vh' }}>
+        <div className="sticky top-0 left-0 w-full">
+          <div ref={playerRef} className="relative w-full aspect-video bg-black shadow-2xl overflow-hidden">
+            <iframe
+              key={`${shouldAutoplay ? 'autoplay' : 'idle'}-${muted ? 'muted' : 'unmuted'}`}
+              src={iframeSrc}
+              title="Loving Karma Teaser"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              className="absolute inset-0 w-full h-full pointer-events-none"
+              tabIndex={-1}
+            />
+            {/* Cinematic gradient overlays */}
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/40 to-transparent" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 to-transparent" />
+            {/* Custom unmute control */}
+            <button
+              type="button"
+              onClick={() => setMuted((m) => !m)}
+              aria-label={muted ? 'Unmute teaser' : 'Mute teaser'}
+              className="absolute bottom-6 right-6 flex items-center gap-2 bg-white/15 backdrop-blur-md text-white px-4 py-2.5 rounded-full hover:bg-white/25 transition-all duration-300 shadow-lg border border-white/20"
+              style={{ fontSize: '0.875rem', fontWeight: '500' }}
+            >
+              {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+              <span>{muted ? 'Tap for sound' : 'Sound on'}</span>
+            </button>
+            {/* Title plate */}
+            <div className="absolute top-6 left-6 pointer-events-none">
+              <p className="text-white/80" style={{ fontSize: '0.75rem', letterSpacing: '0.18em', fontWeight: '500' }}>
+                TEASER
+              </p>
+              <p className="text-white" style={{ fontSize: '1.25rem', fontFamily: 'Georgia, serif', textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}>
+                Loving Karma
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 pb-24 pt-12">
         <div className="text-center">
           <h3 className="text-[#1A4065] mb-4" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
             Watch the Teaser!
