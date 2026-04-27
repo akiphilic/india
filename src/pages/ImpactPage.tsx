@@ -187,23 +187,26 @@ export function ImpactPage() {
               </ResponsiveContainer>
             </div>
 
-            <div className="max-w-2xl mx-auto">
-              {/* Graduate Outcomes Pie Chart */}
-              <div className="bg-[#F1EDE8] rounded-[15px] p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <PieChart size={32} color="#1A4065" />
-                  <h3 className="text-[#1A4065]" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
-                    Graduate Career Paths
-                  </h3>
-                </div>
-                <ResponsiveContainer width="100%" height={300}>
+            {/* Graduate Outcomes Pie Chart */}
+            <div className="bg-[#F1EDE8] rounded-[15px] p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <PieChart size={32} color="#1A4065" />
+                <h3 className="text-[#1A4065]" style={{ fontSize: '1.75rem', fontWeight: '600' }}>
+                  Graduate Career Paths
+                </h3>
+              </div>
+              <p className="text-gray-700 mb-8">
+                Where graduates go after Jhamtse Gatsal — university, employment, and gap years
+              </p>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <ResponsiveContainer width="100%" height={350}>
                   <PieChart>
                     <Pie
                       data={outcomeData}
                       cx="50%"
                       cy="50%"
-                      innerRadius={60}
-                      outerRadius={100}
+                      innerRadius={70}
+                      outerRadius={120}
                       paddingAngle={5}
                       dataKey="value"
                       label={(entry) => `${entry.name} ${entry.value}%`}
@@ -215,14 +218,14 @@ export function ImpactPage() {
                     <Tooltip />
                   </PieChart>
                 </ResponsiveContainer>
-                <div className="mt-6 space-y-2">
+                <div className="space-y-4">
                   {outcomeData.map((item, index) => (
-                    <div key={index} className="flex items-center justify-between text-sm">
-                      <div className="flex items-center gap-2">
+                    <div key={index} className="flex items-center justify-between bg-white/60 rounded-[10px] px-4 py-3">
+                      <div className="flex items-center gap-3">
                         <div className="w-4 h-4 rounded" style={{ backgroundColor: item.color }}></div>
-                        <span className="text-gray-700">{item.name}</span>
+                        <span className="text-gray-700" style={{ fontSize: '1rem', fontWeight: '500' }}>{item.name}</span>
                       </div>
-                      <span className="text-[#1A4065]" style={{ fontWeight: '600' }}>{item.value}%</span>
+                      <span className="text-[#1A4065]" style={{ fontSize: '1.25rem', fontWeight: '700' }}>{item.value}%</span>
                     </div>
                   ))}
                 </div>
