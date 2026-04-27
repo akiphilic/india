@@ -40,29 +40,29 @@ export function DocumentarySection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center mb-10">
-          <div className="md:col-span-2 flex justify-center">
-            <img
-              src={posterUrl}
-              alt="Loving Karma documentary poster"
-              className="rounded-[15px] shadow-2xl w-full max-w-sm"
-            />
-          </div>
-
-          <div className="md:col-span-3" ref={playerRef}>
-            <div className="relative rounded-[15px] overflow-hidden shadow-2xl aspect-video">
-              <iframe
-                key={shouldAutoplay ? 'autoplay' : 'idle'}
-                src={iframeSrc}
-                title="Loving Karma Teaser"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
-            </div>
-          </div>
+        <div className="flex justify-center mb-10">
+          <img
+            src={posterUrl}
+            alt="Loving Karma documentary poster"
+            className="rounded-[15px] shadow-2xl w-full max-w-sm"
+          />
         </div>
+      </div>
 
+      <div className="w-full mb-12" ref={playerRef}>
+        <div className="relative w-full aspect-video shadow-2xl">
+          <iframe
+            key={shouldAutoplay ? 'autoplay' : 'idle'}
+            src={iframeSrc}
+            title="Loving Karma Teaser"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="absolute inset-0 w-full h-full"
+          />
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-6">
         <div className="text-center">
           <h3 className="text-[#1A4065] mb-4" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
             Watch the Teaser!
