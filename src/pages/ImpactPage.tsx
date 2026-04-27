@@ -4,6 +4,7 @@ import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { FinalCTA } from '../components/FinalCTA';
 import tenzinDrolmaImg from '../assets/phase1/4-tenzin-drolma.jpeg';
 import rinchenImg from '../assets/phase1/5-rinchen.jpeg';
+import rinchenBeforeImg from '../assets/phase2/5-rinchen-before.png';
 import dawaImg from '../assets/phase1/6-dawa.jpeg';
 import lobsangImg from '../assets/phase1/7-lobsang.jpeg';
 
@@ -236,16 +237,31 @@ export function ImpactPage() {
         <div className="max-w-6xl mx-auto px-6">
           {/* Two-column layout */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-            {/* Left Column - Photo */}
-            <div className="relative">
-              <ImageWithFallback
-                src={rinchenImg}
-                alt="Rinchen Tsering"
-                className="w-full h-[500px] md:h-[700px] object-cover rounded-[15px] shadow-lg"
-              />
-              {/* Changemaker Badge */}
-              <div className="absolute top-5 right-5 bg-[#FFCA0A] text-[#1A4065] px-4 py-2 rounded-[20px] shadow-md" style={{ fontWeight: 'bold', fontSize: '0.875rem' }}>
-                Changemaker
+            {/* Left Column - Before / After Photos */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative">
+                <div className="absolute top-3 left-3 z-10 bg-[#A7B867]/90 text-white px-3 py-1 rounded-full shadow-md" style={{ fontSize: '0.75rem', fontWeight: '600', letterSpacing: '0.05em' }}>
+                  BEFORE
+                </div>
+                <ImageWithFallback
+                  src={rinchenBeforeImg}
+                  alt="Rinchen Tsering before"
+                  className="w-full h-[300px] md:h-[500px] object-cover rounded-[15px] shadow-lg"
+                />
+              </div>
+              <div className="relative">
+                <div className="absolute top-3 left-3 z-10 bg-[#1A4065]/90 text-white px-3 py-1 rounded-full shadow-md" style={{ fontSize: '0.75rem', fontWeight: '600', letterSpacing: '0.05em' }}>
+                  AFTER
+                </div>
+                <ImageWithFallback
+                  src={rinchenImg}
+                  alt="Rinchen Tsering today"
+                  className="w-full h-[300px] md:h-[500px] object-cover rounded-[15px] shadow-lg"
+                />
+                {/* Changemaker Badge */}
+                <div className="absolute top-3 right-3 bg-[#FFCA0A] text-[#1A4065] px-3 py-1 rounded-[20px] shadow-md" style={{ fontWeight: 'bold', fontSize: '0.75rem' }}>
+                  Changemaker
+                </div>
               </div>
             </div>
 
