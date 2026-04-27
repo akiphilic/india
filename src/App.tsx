@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import { DonatePage } from './pages/DonatePage';
 import { AboutPage } from './pages/AboutPage';
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/events/:eventId" element={<><Header /><EventDetailPage /></>} />
           <Route path="/new-school-project" element={<><Header /><NewSchoolProjectPage /></>} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
