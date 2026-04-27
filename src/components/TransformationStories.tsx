@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import tenzinDrolmaImg from '../assets/phase1/4-tenzin-drolma.jpeg';
 import dawaImg from '../assets/phase1/6-dawa.jpeg';
 
@@ -53,9 +54,19 @@ export function TransformationStories() {
                 <h3 className="mb-4">{story.title}</h3>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed">
                   {story.description}
                 </p>
+
+                {/* Read more link */}
+                <Link
+                  to="/impact"
+                  className="inline-flex items-center gap-2 text-[#1A4065] hover:text-[#A7B867] transition-colors duration-200"
+                  style={{ fontSize: '1rem', fontWeight: '600' }}
+                >
+                  Read More
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </div>
           ))}
