@@ -242,7 +242,7 @@ export function ImpactPage() {
       </section>
 
       {/* Featured Graduate Story - Rinchen */}
-      <section className="bg-[#F1EDE8] py-20">
+      <section id="rinchen-tsering" className="bg-[#F1EDE8] py-20 scroll-mt-24">
         <div className="max-w-6xl mx-auto px-6">
           {/* Two-column layout */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
@@ -350,7 +350,8 @@ export function ImpactPage() {
           {transformationStories.map((story, index) => (
             <div
               key={index}
-              className={`py-16 ${index % 2 === 0 ? 'bg-white' : 'bg-[#F1EDE8]'}`}
+              id={story.name.toLowerCase().replace(/\s+/g, '-')}
+              className={`py-16 scroll-mt-24 ${index % 2 === 0 ? 'bg-white' : 'bg-[#F1EDE8]'}`}
             >
               <div className="max-w-6xl mx-auto px-6">
                 <h3 className="text-[#1A4065] text-center mb-12" style={{ fontSize: '2rem', fontFamily: 'Georgia, serif' }}>
