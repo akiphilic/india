@@ -6,7 +6,9 @@ import tenzinDrolmaImg from '../assets/phase1/4-tenzin-drolma.jpeg';
 import rinchenImg from '../assets/phase1/5-rinchen.jpeg';
 import rinchenBeforeImg from '../assets/phase2/5-rinchen-before.png';
 import dawaImg from '../assets/phase1/6-dawa.jpeg';
+import dawaBeforeImg from '../assets/phase2/6-dawa-before.jpeg';
 import lobsangImg from '../assets/phase1/7-lobsang.jpeg';
+import lobsangBeforeImg from '../assets/phase2/7-lobsang-before.jpeg';
 
 export function ImpactPage() {
   // Data for Year-over-Year Growth (number of students newly enrolled per year)
@@ -55,6 +57,7 @@ export function ImpactPage() {
       story: 'Dawa grew up in a home shadowed by addiction, instability, and loss. With both parents struggling with alcoholism and her father gone too soon, her childhood was marked by hardship and uncertainty. Yet, she refused to let her circumstances define her. After graduating from Jhamtse Gatsal Children\'s Community, Dawa earned a scholarship to study History in Bangalore.',
       currentRole: 'Now in her third year of college, she is growing into a confident, thoughtful young woman. Though her future path is still unfolding, her purpose is clear—to rise above her past and use her education to create meaningful change in the world.',
       image: dawaImg,
+      beforeImage: dawaBeforeImg,
       timeline: [
         { year: '2008', event: 'Admitted to Jhamtse Gatsal' },
         { year: '2022', event: 'High School Graduate' },
@@ -68,6 +71,7 @@ export function ImpactPage() {
       currentRole: 'Today, she studies Hospitality Management and Catering in South India, passionately creating new dishes and dreaming of her own restaurant. From uncertainty to ambition, her journey shows how love, sacrifice, and education can transform a life and turn fragile beginnings into powerful new possibilities.',
       image: lobsangImg,
       imageClassName: 'object-top',
+      beforeImage: lobsangBeforeImg,
       timeline: [
         { year: '2010', event: 'Admitted to Jhamtse Gatsal' },
         { year: '2023', event: 'High School Graduate' },
@@ -353,13 +357,38 @@ export function ImpactPage() {
 
                 <div className={`grid md:grid-cols-2 gap-12 items-start mb-12 ${index % 2 === 1 ? 'md:[direction:rtl]' : ''}`}>
                   {/* Portrait */}
-                  <div className="rounded-[15px] overflow-hidden shadow-lg md:[direction:ltr]">
-                    <ImageWithFallback
-                      src={story.image}
-                      alt={story.name}
-                      className={`w-full h-[500px] object-cover ${story.imageClassName ?? ''}`}
-                    />
-                  </div>
+                  {story.beforeImage ? (
+                    <div className="grid grid-cols-2 gap-4 md:[direction:ltr]">
+                      <div className="relative">
+                        <div className="absolute top-3 left-3 z-10 bg-[#A7B867]/90 text-white px-3 py-1 rounded-full shadow-md" style={{ fontSize: '0.75rem', fontWeight: '600', letterSpacing: '0.05em' }}>
+                          BEFORE
+                        </div>
+                        <ImageWithFallback
+                          src={story.beforeImage}
+                          alt={`${story.name} before`}
+                          className="w-full h-[300px] md:h-[500px] object-cover rounded-[15px] shadow-lg"
+                        />
+                      </div>
+                      <div className="relative">
+                        <div className="absolute top-3 left-3 z-10 bg-[#1A4065]/90 text-white px-3 py-1 rounded-full shadow-md" style={{ fontSize: '0.75rem', fontWeight: '600', letterSpacing: '0.05em' }}>
+                          AFTER
+                        </div>
+                        <ImageWithFallback
+                          src={story.image}
+                          alt={`${story.name} today`}
+                          className={`w-full h-[300px] md:h-[500px] object-cover rounded-[15px] shadow-lg ${story.imageClassName ?? ''}`}
+                        />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="rounded-[15px] overflow-hidden shadow-lg md:[direction:ltr]">
+                      <ImageWithFallback
+                        src={story.image}
+                        alt={story.name}
+                        className={`w-full h-[500px] object-cover ${story.imageClassName ?? ''}`}
+                      />
+                    </div>
+                  )}
 
                   {/* Story content */}
                   <div className="md:[direction:ltr]">
