@@ -2,6 +2,7 @@ import { TrendingUp, Users, GraduationCap, Heart, DollarSign, Award, Globe, Targ
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { FinalCTA } from '../components/FinalCTA';
+import tenzinDrolmaImg from '../assets/phase1/4-tenzin-drolma.jpeg';
 import rinchenImg from '../assets/phase1/5-rinchen.jpeg';
 import dawaImg from '../assets/phase1/6-dawa.jpeg';
 import lobsangImg from '../assets/phase1/7-lobsang.jpeg';
@@ -34,15 +35,20 @@ export function ImpactPage() {
     { name: 'Gap Year', value: 7, color: '#FFCA0A' },
   ];
 
-  // Data for Fund Allocation
-  const fundData = [
-    { name: 'Education', value: 35, color: '#1A4065' },
-    { name: 'Meals', value: 35, color: '#A7B867' },
-    { name: 'Housing', value: 20, color: '#FFCA0A' },
-    { name: 'Healthcare', value: 10, color: '#F1EDE8' },
-  ];
-
   const transformationStories = [
+    {
+      name: 'Tenzin Drolma',
+      story: "Tenzin Drolma was very young when she lost her mother. Raised by her father, a farmer, she spent much of her childhood helping in the fields. When we first met her, she was barefoot, covered in dirt from farm work, and spoke very little. When Tenzin joined the Jhamtse Gatsal community, she was welcomed into a place where she could learn, grow, and feel supported. Here, she continued her education and slowly began to discover her confidence and potential.",
+      currentRole: 'Today, Tenzin Drolma is a doctor of Tibetan medicine. She dreams of helping as many people as she can through her healing practice and has already spent time volunteering to care for elderly people. With the support of the community, she became a first-generation learner and the first person from her village to pursue this field.',
+      image: tenzinDrolmaImg,
+      timeline: [
+        { year: 'Childhood', event: 'Lost her mother; raised by her farmer father' },
+        { year: 'Joined', event: 'Welcomed into the Jhamtse Gatsal community' },
+        { year: 'Studied', event: 'First in her village to study Tibetan Medicine' },
+        { year: 'Today', event: 'Doctor of Tibetan Medicine, volunteering with the elderly' },
+      ],
+      quote: '"I came from a place of uncertainty, but Jhamtse Gatsal helped me find strength, direction, and hope."',
+    },
     {
       name: 'Dawa',
       story: 'Dawa grew up in a home shadowed by addiction, instability, and loss. With both parents struggling with alcoholism and her father gone too soon, her childhood was marked by hardship and uncertainty. Yet, she refused to let her circumstances define her. After graduating from Jhamtse Gatsal Children\'s Community, Dawa earned a scholarship to study History in Bangalore.',
@@ -179,7 +185,7 @@ export function ImpactPage() {
               </ResponsiveContainer>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="max-w-2xl mx-auto">
               {/* Graduate Outcomes Pie Chart */}
               <div className="bg-[#F1EDE8] rounded-[15px] p-8">
                 <div className="flex items-center gap-3 mb-6">
@@ -209,45 +215,6 @@ export function ImpactPage() {
                 </ResponsiveContainer>
                 <div className="mt-6 space-y-2">
                   {outcomeData.map((item, index) => (
-                    <div key={index} className="flex items-center justify-between text-sm">
-                      <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 rounded" style={{ backgroundColor: item.color }}></div>
-                        <span className="text-gray-700">{item.name}</span>
-                      </div>
-                      <span className="text-[#1A4065]" style={{ fontWeight: '600' }}>{item.value}%</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Fund Allocation Pie Chart */}
-              <div className="bg-[#F1EDE8] rounded-[15px] p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <Heart size={32} color="#FFCA0A" />
-                  <h3 className="text-[#1A4065]" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
-                    Use of Donations
-                  </h3>
-                </div>
-                <ResponsiveContainer width="100%" height={300}>
-                  <PieChart>
-                    <Pie
-                      data={fundData}
-                      cx="50%"
-                      cy="50%"
-                      outerRadius={100}
-                      paddingAngle={5}
-                      dataKey="value"
-                      label={(entry) => `${entry.name} ${entry.value}%`}
-                    >
-                      {fundData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.color} />
-                      ))}
-                    </Pie>
-                    <Tooltip />
-                  </PieChart>
-                </ResponsiveContainer>
-                <div className="mt-6 space-y-2">
-                  {fundData.map((item, index) => (
                     <div key={index} className="flex items-center justify-between text-sm">
                       <div className="flex items-center gap-2">
                         <div className="w-4 h-4 rounded" style={{ backgroundColor: item.color }}></div>
