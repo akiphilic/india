@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
 import { HomePage } from './pages/HomePage';
 import { DonatePage } from './pages/DonatePage';
 import { AboutPage } from './pages/AboutPage';
@@ -14,6 +15,7 @@ import { EventDetailPage } from './pages/EventDetailPage';
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Routes>
           <Route path="/" element={<><Header /><HomePage /></>} />
