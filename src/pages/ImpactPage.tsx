@@ -3,6 +3,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { FinalCTA } from '../components/FinalCTA';
 import tenzinDrolmaImg from '../assets/phase1/4-tenzin-drolma.jpeg';
+import tenzinDrolmaBeforeImg from '../assets/phase2/4-tenzin-drolma-before.jpeg';
 import rinchenImg from '../assets/phase1/5-rinchen.jpeg';
 import rinchenBeforeImg from '../assets/phase2/5-rinchen-before.png';
 import dawaImg from '../assets/phase1/6-dawa.jpeg';
@@ -44,6 +45,7 @@ export function ImpactPage() {
       story: "Tenzin Drolma was very young when she lost her mother. Raised by her father, a farmer, she spent much of her childhood helping in the fields. When we first met her, she was barefoot, covered in dirt from farm work, and spoke very little. When Tenzin joined the Jhamtse Gatsal community, she was welcomed into a place where she could learn, grow, and feel supported. Here, she continued her education and slowly began to discover her confidence and potential.",
       currentRole: 'Today, Tenzin Drolma is a doctor of Tibetan medicine. She dreams of helping as many people as she can through her healing practice and has already spent time volunteering to care for elderly people. With the support of the community, she became a first-generation learner and the first person from her village to pursue this field.',
       image: tenzinDrolmaImg,
+      beforeImage: tenzinDrolmaBeforeImg,
       timeline: [
         { year: 'Childhood', event: 'Lost her mother; raised by her farmer father' },
         { year: 'Joined', event: 'Welcomed into the Jhamtse Gatsal community' },

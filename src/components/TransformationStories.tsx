@@ -1,14 +1,18 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import tenzinDrolmaImg from '../assets/phase1/4-tenzin-drolma.jpeg';
+import tenzinDrolmaBeforeImg from '../assets/phase2/4-tenzin-drolma-before.jpeg';
 import dawaImg from '../assets/phase1/6-dawa.jpeg';
 import dawaBeforeImg from '../assets/phase2/6-dawa-before.jpeg';
 import rinchenImg from '../assets/phase1/5-rinchen.jpeg';
 import rinchenBeforeImg from '../assets/phase2/5-rinchen-before.png';
+import lobsangImg from '../assets/phase1/7-lobsang.jpeg';
+import lobsangBeforeImg from '../assets/phase2/7-lobsang-before.jpeg';
 
 type Story = {
   image: string;
   beforeImage?: string;
+  imageClassName?: string;
   title: string;
   description: string;
 };
@@ -17,6 +21,7 @@ export function TransformationStories() {
   const stories: Story[] = [
     {
       image: tenzinDrolmaImg,
+      beforeImage: tenzinDrolmaBeforeImg,
       title: "Tenzin Drolma — From Field to Healer",
       description: "She lost her mother young and grew up barefoot, helping her father in the fields. Welcomed into Jhamtse Gatsal, she became the first in her village to study Tibetan Medicine—and now serves as a doctor caring for the elderly."
     },
@@ -31,15 +36,22 @@ export function TransformationStories() {
       beforeImage: rinchenBeforeImg,
       title: "Rinchen Tsering — From Loss to Leadership",
       description: "After losing his mother to cancer, Rinchen found a new family at Jhamtse Gatsal. He earned a degree in Travel & Tourism Management—the first in his family—and returned home in 2025 as Admin and Operations Manager."
+    },
+    {
+      image: lobsangImg,
+      beforeImage: lobsangBeforeImg,
+      imageClassName: 'object-top',
+      title: "Lobsang — From Sacrifice to Ambition",
+      description: "Sent to Jhamtse Gatsal by a struggling single mother, Lobsang became the first in her family to receive an education. Today she studies Hospitality Management and Catering in South India, dreaming of opening her own restaurant."
     }
   ];
 
   return (
     <section className="py-24 bg-[#F1EDE8]">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-center mb-16">Stories of Transformation</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {stories.map((story, index) => (
             <div
               key={index}
@@ -65,7 +77,7 @@ export function TransformationStories() {
                     <img
                       src={story.image}
                       alt={`${story.title} today`}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover ${story.imageClassName ?? ''}`}
                     />
                   </div>
                 </div>
