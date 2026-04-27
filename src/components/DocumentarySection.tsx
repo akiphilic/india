@@ -1,8 +1,33 @@
 import { ExternalLink } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 const posterUrl = new URL('../assets/phase2/16.png', import.meta.url).href;
+const VIDEO_ID = 'dzvl5trn4L4';
 
 export function DocumentarySection() {
+  const [shouldAutoplay, setShouldAutoplay] = useState(false);
+  const playerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const target = playerRef.current;
+    if (!target) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldAutoplay(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, []);
+
+  const iframeSrc = `https://www.youtube.com/embed/${VIDEO_ID}${
+    shouldAutoplay ? '?autoplay=1&mute=1&playsinline=1&rel=0' : '?rel=0'
+  }`;
+
   return (
     <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
@@ -24,10 +49,11 @@ export function DocumentarySection() {
             />
           </div>
 
-          <div className="md:col-span-3">
+          <div className="md:col-span-3" ref={playerRef}>
             <div className="relative rounded-[15px] overflow-hidden shadow-2xl aspect-video">
               <iframe
-                src="https://www.youtube.com/embed/dzvl5trn4L4"
+                key={shouldAutoplay ? 'autoplay' : 'idle'}
+                src={iframeSrc}
                 title="Loving Karma Teaser"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
