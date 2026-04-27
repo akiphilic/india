@@ -66,6 +66,7 @@ export function ImpactPage() {
       story: 'Lobsang was raised by her single mother, who struggled through short-term jobs to survive. With no father present and elderly grandparents unable to help, her mother made the heartbreaking yet brave choice to send her to Jhamtse Gatsal Children\'s Community, hoping for a better future. It changed everything—Lobsang became the first in her family to receive an education.',
       currentRole: 'Today, she studies Hospitality Management and Catering in South India, passionately creating new dishes and dreaming of her own restaurant. From uncertainty to ambition, her journey shows how love, sacrifice, and education can transform a life and turn fragile beginnings into powerful new possibilities.',
       image: lobsangImg,
+      imageClassName: 'object-top',
       timeline: [
         { year: '2010', event: 'Admitted to Jhamtse Gatsal' },
         { year: '2023', event: 'High School Graduate' },
@@ -337,7 +338,7 @@ export function ImpactPage() {
                     <ImageWithFallback
                       src={story.image}
                       alt={story.name}
-                      className="w-full h-[500px] object-cover"
+                      className={`w-full h-[500px] object-cover ${story.imageClassName ?? ''}`}
                     />
                   </div>
 
