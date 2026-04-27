@@ -10,7 +10,7 @@ export function ScrollToTop() {
       requestAnimationFrame(() => {
         const el = document.getElementById(id);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          el.scrollIntoView({ behavior: 'auto', block: 'start' });
           return;
         }
         window.scrollTo(0, 0);

@@ -247,15 +247,15 @@ export function ImpactPage() {
           {/* Two-column layout */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
             {/* Left Column - Before / After Photos */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative">
+            <div className="grid grid-cols-2 gap-2">
+              <div className="relative overflow-hidden rounded-[15px] shadow-lg">
                 <div className="absolute top-3 left-3 z-10 bg-[#A7B867]/90 text-white px-3 py-1 rounded-full shadow-md" style={{ fontSize: '0.75rem', fontWeight: '600', letterSpacing: '0.05em' }}>
                   BEFORE
                 </div>
                 <ImageWithFallback
                   src={rinchenBeforeImg}
                   alt="Rinchen Tsering before"
-                  className="w-full h-[300px] md:h-[500px] object-cover rounded-[15px] shadow-lg"
+                  className="w-full h-[300px] md:h-[500px] object-cover object-top scale-110 origin-top"
                 />
               </div>
               <div className="relative">

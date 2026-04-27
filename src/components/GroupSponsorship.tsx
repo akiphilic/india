@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react';
+import groupSponsorshipImg from '../assets/phase2/group-sponsorship.jpg';
 
 export function GroupSponsorship() {
   const benefits = [
@@ -19,7 +20,7 @@ export function GroupSponsorship() {
             {/* Image */}
             <div className="h-80 md:h-auto">
               <img
-                src="https://images.unsplash.com/photo-1548102268-3d7dc56b01e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGNoaWxkcmVuJTIwZ3JvdXAlMjBzY2hvb2x8ZW58MXx8fHwxNzY2MTEyOTc2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src={groupSponsorshipImg}
                 alt="Group of happy children"
                 className="w-full h-full object-cover"
               />
